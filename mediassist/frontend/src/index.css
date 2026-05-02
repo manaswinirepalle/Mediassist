@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --midnight: #060d1a;
+  --navy: #0a1628;
+  --navy-light: #0f1f3d;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-glow: rgba(45, 212, 191, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.07);
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--midnight);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ───────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 212, 191, 0.5);
+}
+
+/* ── Glass card ──────────────────────── */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card-hover:hover {
+  background: var(--glass-hover);
+  border-color: rgba(45, 212, 191, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* ── Gradient text ───────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #2dd4bf 0%, #818cf8 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-teal {
+  background: linear-gradient(135deg, #2dd4bf, #67e8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow effects ────────────────────── */
+.teal-glow {
+  box-shadow: 0 0 30px rgba(45, 212, 191, 0.15), 0 0 60px rgba(45, 212, 191, 0.05);
+}
+
+.teal-glow-text {
+  text-shadow: 0 0 30px rgba(45, 212, 191, 0.5);
+}
+
+/* ── Background mesh ─────────────────── */
+.mesh-bg {
+  background-color: var(--midnight);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(45, 212, 191, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(244, 114, 182, 0.03) 0%, transparent 70%);
+}
+
+/* ── Typing animation ────────────────── */
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+.typing-dot {
+  animation: typing-dot 1.4s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── Keyword highlight ───────────────── */
+.keyword-highlight {
+  background: rgba(45, 212, 191, 0.15);
+  color: #2dd4bf;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* ── Shimmer loading ─────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── Pulse ring ──────────────────────── */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(45, 212, 191, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 212, 191, 0); }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* ── Prose styles for markdown ───────── */
+.prose-medical h1, .prose-medical h2, .prose-medical h3 {
+  color: #e2e8f0;
+  font-weight: 600;
+  margin: 0.75em 0 0.4em;
+}
+.prose-medical p { color: #cbd5e1; line-height: 1.7; margin-bottom: 0.75em; }
+.prose-medical ul { padding-left: 1.25em; margin-bottom: 0.75em; }
+.prose-medical li { color: #cbd5e1; margin-bottom: 0.3em; line-height: 1.6; }
+.prose-medical strong { color: #e2e8f0; font-weight: 600; }
+.prose-medical em { color: #94a3b8; font-style: italic; }
+
+/* ── Custom button ───────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--teal-400), var(--teal-500));
+  box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}

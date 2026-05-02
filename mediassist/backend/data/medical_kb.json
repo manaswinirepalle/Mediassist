@@ -1,0 +1,86 @@
+[
+  {
+    "id": "fever_001",
+    "title": "Fever - Overview and Management",
+    "content": "Fever is a temporary increase in body temperature, often caused by infection. A temperature above 38°C (100.4°F) is generally considered a fever. Common causes include viral infections (flu, cold), bacterial infections (strep throat, urinary tract infection), inflammation, and certain medications. Symptoms accompanying fever may include sweating, chills, headache, muscle aches, loss of appetite, dehydration, and general weakness. Management includes rest, adequate fluid intake, over-the-counter fever reducers like acetaminophen or ibuprofen, and cool compresses. Seek immediate medical attention if fever exceeds 39.4°C (103°F), lasts more than 3 days, or is accompanied by severe symptoms.",
+    "category": "general",
+    "keywords": ["fever", "temperature", "high temperature", "chills", "sweating", "hot", "thermometer"]
+  },
+  {
+    "id": "cold_001",
+    "title": "Common Cold - Symptoms and Treatment",
+    "content": "The common cold is a viral infection of the upper respiratory tract caused by rhinoviruses in most cases. Symptoms typically include runny or stuffy nose, sneezing, sore throat, mild cough, mild headache, slight body aches, and low-grade fever. Colds usually resolve within 7-10 days. Treatment is mainly symptomatic: rest, staying hydrated, saline nasal drops, throat lozenges, and over-the-counter cold medications. Antibiotics are NOT effective against viral infections like the common cold. Preventive measures include frequent handwashing, avoiding close contact with infected individuals, and not touching your face.",
+    "category": "respiratory",
+    "keywords": ["cold", "runny nose", "sneezing", "sore throat", "nasal congestion", "stuffy nose", "rhinovirus"]
+  },
+  {
+    "id": "headache_001",
+    "title": "Headache - Types and Treatments",
+    "content": "Headaches are one of the most common medical complaints. Tension headaches are the most common type, causing a dull, aching sensation around the head. Migraine headaches cause severe throbbing pain, usually on one side, often with nausea, vomiting, and light/sound sensitivity. Cluster headaches are severe, one-sided headaches occurring in cyclical patterns. Secondary headaches are caused by underlying conditions like sinus infections, hypertension, or dehydration. Treatment varies by type: tension headaches respond to over-the-counter pain relievers; migraines may require triptans or preventive medications; all headaches benefit from rest, hydration, and stress management. Red flags requiring immediate care: sudden severe headache, headache with fever/stiff neck, headache after head injury.",
+    "category": "neurological",
+    "keywords": ["headache", "migraine", "head pain", "tension headache", "throbbing", "cluster headache"]
+  },
+  {
+    "id": "flu_001",
+    "title": "Influenza (Flu) - Symptoms and Care",
+    "content": "Influenza (flu) is a contagious respiratory illness caused by influenza viruses. Unlike the common cold, flu symptoms appear suddenly and are more severe. Symptoms include high fever (38-41°C), severe body aches and chills, intense fatigue, dry cough, headache, and sometimes vomiting and diarrhea. The flu is spread through respiratory droplets. Treatment includes antiviral medications (oseltamivir/Tamiflu) if started within 48 hours of symptom onset, rest, fluids, and fever-reducing medications. Complications can include pneumonia, especially in high-risk groups (elderly, young children, immunocompromised, pregnant women). Annual flu vaccination is the best prevention. Recovery typically takes 1-2 weeks.",
+    "category": "respiratory",
+    "keywords": ["flu", "influenza", "body aches", "fever", "fatigue", "chills", "respiratory", "antiviral"]
+  },
+  {
+    "id": "diabetes_001",
+    "title": "Diabetes Mellitus - Types and Management",
+    "content": "Diabetes is a chronic condition where the body cannot properly regulate blood glucose levels. Type 1 diabetes is an autoimmune condition where the pancreas produces little or no insulin; it requires insulin therapy. Type 2 diabetes occurs when cells resist insulin or the pancreas doesn't produce enough; it's often linked to lifestyle factors. Gestational diabetes occurs during pregnancy. Common symptoms: increased thirst (polydipsia), frequent urination (polyuria), blurred vision, fatigue, slow-healing wounds, and unexplained weight loss. Management includes blood sugar monitoring, healthy diet (low-glycemic foods), regular exercise, medications (metformin, insulin), and regular medical checkups. Complications of uncontrolled diabetes include neuropathy, retinopathy, kidney disease, and cardiovascular disease.",
+    "category": "endocrine",
+    "keywords": ["diabetes", "blood sugar", "glucose", "insulin", "type 1", "type 2", "thirst", "urination", "hyperglycemia"]
+  },
+  {
+    "id": "hypertension_001",
+    "title": "High Blood Pressure (Hypertension)",
+    "content": "Hypertension is consistently elevated blood pressure in arteries. Normal blood pressure is below 120/80 mmHg. Stage 1 hypertension is 130-139/80-89 mmHg. Stage 2 is 140/90 mmHg or higher. Hypertension is often called the 'silent killer' as it has no obvious symptoms until damage occurs. Risk factors include age, family history, obesity, sedentary lifestyle, high-sodium diet, smoking, excessive alcohol, and stress. Long-term complications include heart disease, stroke, kidney damage, and vision problems. Treatment: lifestyle changes (DASH diet, exercise, weight loss, smoking cessation, alcohol limitation) and medications (ACE inhibitors, ARBs, calcium channel blockers, diuretics). Regular blood pressure monitoring is essential.",
+    "category": "cardiovascular",
+    "keywords": ["hypertension", "high blood pressure", "BP", "blood pressure", "cardiovascular", "heart", "stroke risk"]
+  },
+  {
+    "id": "allergy_001",
+    "title": "Allergies - Types and Management",
+    "content": "Allergies occur when the immune system reacts to a foreign substance (allergen). Common types include seasonal allergies (hay fever/allergic rhinitis), food allergies, skin allergies (eczema, hives), insect sting allergies, and drug allergies. Symptoms vary by type: nasal allergies cause sneezing, runny nose, itchy eyes; food allergies cause hives, swelling, digestive issues, or anaphylaxis; skin allergies cause rashes and itching. Anaphylaxis is a life-threatening emergency requiring immediate epinephrine injection. Diagnosis is through allergy testing. Treatment: antihistamines, decongestants, nasal corticosteroids, immunotherapy (allergy shots). Avoidance of known triggers is key. Individuals with known severe allergies should always carry an epinephrine auto-injector (EpiPen).",
+    "category": "immunology",
+    "keywords": ["allergy", "allergic", "hay fever", "sneezing", "itchy eyes", "hives", "anaphylaxis", "antihistamine"]
+  },
+  {
+    "id": "asthma_001",
+    "title": "Asthma - Symptoms and Treatment",
+    "content": "Asthma is a chronic inflammatory disease of the airways that causes recurring episodes of wheezing, breathlessness, chest tightness, and coughing. Triggers include allergens (pollen, dust mites, pet dander), respiratory infections, exercise, cold air, smoke, and stress. Asthma severity ranges from intermittent to severe persistent. Diagnosis is confirmed through spirometry and bronchodilator response testing. Treatment involves quick-relief medications (short-acting beta-agonists like albuterol) for acute symptoms and long-term control medications (inhaled corticosteroids, long-acting beta-agonists, leukotriene modifiers). An asthma action plan helps manage symptoms and recognize worsening. Seek emergency care for severe attacks not responding to reliever medication.",
+    "category": "respiratory",
+    "keywords": ["asthma", "wheezing", "breathlessness", "chest tightness", "inhaler", "bronchospasm", "breathing difficulty"]
+  },
+  {
+    "id": "anxiety_001",
+    "title": "Anxiety Disorders - Overview",
+    "content": "Anxiety disorders are the most common mental health condition. They include generalized anxiety disorder (GAD), panic disorder, social anxiety disorder, and specific phobias. Symptoms include excessive worry, restlessness, fatigue, difficulty concentrating, irritability, muscle tension, and sleep disturbances. Physical symptoms may include rapid heart rate, sweating, trembling, and shortness of breath. Anxiety is caused by a combination of genetic, environmental, psychological, and developmental factors. Treatment includes cognitive-behavioral therapy (CBT), medication (SSRIs, SNRIs, benzodiazepines for short-term), lifestyle changes (regular exercise, sleep hygiene, stress management, limiting caffeine and alcohol), and mindfulness practices. Anxiety disorders are highly treatable with proper care.",
+    "category": "mental_health",
+    "keywords": ["anxiety", "worry", "panic", "stress", "mental health", "nervousness", "panic attack", "restlessness"]
+  },
+  {
+    "id": "back_pain_001",
+    "title": "Back Pain - Causes and Relief",
+    "content": "Back pain is one of the most common reasons people seek medical care. It can be acute (lasting less than 6 weeks), subacute (6-12 weeks), or chronic (more than 12 weeks). Common causes: muscle or ligament strain, bulging/herniated discs, arthritis, osteoporosis, and poor posture. Symptoms range from dull aching to sharp stabbing pain, sometimes radiating down the leg (sciatica). Risk factors include age, lack of exercise, excess weight, improper lifting, and psychological conditions. Treatment: over-the-counter pain relievers (NSAIDs), heat/ice application, gentle stretching, physical therapy, and in severe cases, injections or surgery. Red flags requiring urgent care: back pain with bladder/bowel dysfunction, numbness, or after trauma.",
+    "category": "musculoskeletal",
+    "keywords": ["back pain", "lower back", "spine", "sciatica", "herniated disc", "lumbar", "back ache"]
+  },
+  {
+    "id": "covid_001",
+    "title": "COVID-19 - Symptoms and Care",
+    "content": "COVID-19 is caused by the SARS-CoV-2 coronavirus. Symptoms range from mild to severe and typically appear 2-14 days after exposure. Common symptoms: fever, dry cough, fatigue, loss of taste or smell (anosmia), sore throat, headache, body aches, shortness of breath, diarrhea, and runny nose. Severe symptoms include difficulty breathing, persistent chest pain, confusion, and bluish lips. High-risk groups include elderly individuals and those with underlying conditions. Prevention: vaccination, masking, hand hygiene, and ventilation. Treatment is largely supportive; antiviral medications (Paxlovid) are available for high-risk individuals. Long COVID can cause persistent symptoms weeks or months after recovery.",
+    "category": "infectious",
+    "keywords": ["covid", "coronavirus", "COVID-19", "loss of smell", "loss of taste", "SARS-CoV-2", "pandemic"]
+  },
+  {
+    "id": "dehydration_001",
+    "title": "Dehydration - Signs and Treatment",
+    "content": "Dehydration occurs when the body loses more fluid than it takes in. It can be mild, moderate, or severe. Symptoms of mild to moderate dehydration: increased thirst, dry mouth, decreased urine output, dark yellow urine, fatigue, dizziness, and headache. Severe dehydration is a medical emergency with symptoms including extreme thirst, very dry skin, rapid heartbeat, rapid breathing, sunken eyes, and confusion. Causes include vomiting, diarrhea, excessive sweating, insufficient fluid intake, and certain medications. Treatment: oral rehydration with water or electrolyte solutions for mild cases; intravenous fluids for severe cases. Prevention involves drinking adequate fluids (8 glasses/day for most adults) and increasing intake during hot weather, exercise, or illness.",
+    "category": "general",
+    "keywords": ["dehydration", "thirst", "dry mouth", "dark urine", "water", "electrolytes", "fluid intake"]
+  }
+]
