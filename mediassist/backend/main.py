@@ -34,17 +34,18 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-    "https://mediassist-6blg2n5hg-manaswinirepalles-projects.vercel.app",
-    "http://localhost:5173",
-],
+    # Development-friendly: allow all origins so local and deployed frontends can connect.
+    # For production, restrict this to known origins only.
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # ── Import RAG after app setup ─────────────────
-from rag import answer_medical_question
+# Use package-relative import so the module resolves when running as
+# a package (e.g. `python -m uvicorn mediassist.backend.main`).
+from .rag import answer_medical_question
 
 # ── In-memory chat history (replace with DB for prod) ──
 chat_history: List[dict] = []
