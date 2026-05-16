@@ -38,6 +38,10 @@ dist/
 build/
 *.egg-info/
 
+# Generated documentation bundles
+mediassist_bundle.md
+mediassist_project_all_files.txt
+
 # Temporary files
 *.tmp
 *.temp
