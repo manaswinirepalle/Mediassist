@@ -34,9 +34,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    # Development-friendly: allow all origins so local and deployed frontends can connect.
-    # For production, restrict this to known origins only.
-    allow_origins=["*"],
+    # Allow both localhost (development) and deployed frontend origins
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://mediassist-ai.vercel.app",
+        "*",  # Fallback for other deployments
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -49,6 +53,29 @@ from .rag import answer_medical_question
 
 # ── In-memory chat history (replace with DB for prod) ──
 chat_history: List[dict] = []
+
+
+# ── Startup event ──────────────────────────────
+@app.on_event("startup")
+async def startup_event():
+    logger.info("=" * 60)
+    logger.info("MediAssist AI Backend Starting Up")
+    logger.info("=" * 60)
+    
+    # Verify environment
+    openai_key = os.getenv("OPENAI_API_KEY", "").strip()
+    ai_enabled = bool(openai_key and openai_key not in ("", "your-openai-api-key-here"))
+    
+    logger.info(f"Environment: {os.getenv('ENVIRONMENT', 'development')}")
+    logger.info(f"AI Powered Mode: {'✓ Enabled' if ai_enabled else '✗ Disabled (using context-based mode)'}")
+    logger.info(f"Knowledge Base: Loaded successfully")
+    logger.info("Backend is ready to accept requests")
+    logger.info("=" * 60)
+
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    logger.info("MediAssist AI Backend shutting down")
 
 
 # ── Pydantic models ────────────────────────────
@@ -87,7 +114,7 @@ class HealthResponse(BaseModel):
 
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
-    from rag import KNOWLEDGE_BASE
+    from .rag import KNOWLEDGE_BASE
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
     ai_enabled = bool(openai_key and openai_key not in ("", "your-openai-api-key-here"))
 

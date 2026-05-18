@@ -5,12 +5,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    // Dev proxy for local development - points to local backend
     proxy: {
       '/api': {
-        target: 'https://mediassist-9ibf.onrender.com',
+        target: process.env.VITE_BACKEND_URL || 'http://localhost:8000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify('1.0.0'),
   },
 })

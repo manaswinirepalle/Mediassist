@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mediassist-ai-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
+      - key: ENVIRONMENT
+        value: production
+      - key: OPENAI_API_KEY
+        scope: secret
+        description: "Add your OpenAI API key here (optional)"
+      - key: HOST
+        value: 0.0.0.0

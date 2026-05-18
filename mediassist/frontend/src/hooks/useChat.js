@@ -40,16 +40,32 @@ export function useChat() {
       }
       setMessages((prev) => [...prev, assistantMsg])
     } catch (err) {
+      // Determine error message
+      let errorContent = 'Failed to connect to MediAssist AI backend. Please make sure the server is running.'
+      
+      if (err.code === 'ECONNABORTED') {
+        errorContent = 'Request timeout. The backend server is slow or not responding. Please try again.'
+      } else if (err.code === 'ECONNREFUSED') {
+        errorContent = 'Connection refused. The backend server is not running. Check that Render deployment is active.'
+      } else if (err.message?.includes('Network Error')) {
+        errorContent = err.userMessage || 'Network error. Check your internet connection and backend URL.'
+      } else if (err.response?.status === 400) {
+        errorContent = err.response.data?.detail || 'Invalid request. Please check your input.'
+      } else if (err.response?.status === 500) {
+        errorContent = 'Backend server error. Please check the server logs.'
+      } else if (err.userMessage) {
+        errorContent = err.userMessage
+      }
+
       const errMsg = {
         id: Date.now().toString() + '_err',
         role: 'error',
-        content:
-          err.response?.data?.detail ||
-          'Failed to connect to MediAssist AI backend. Please make sure the server is running.',
+        content: errorContent,
         timestamp: new Date().toISOString(),
       }
       setMessages((prev) => [...prev, errMsg])
       setError(err.message)
+      console.error('Chat error:', err)
     } finally {
       setIsLoading(false)
       scrollToBottom()
