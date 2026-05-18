@@ -26,7 +26,7 @@ api.interceptors.request.use(
 // Response interceptor for logging and error handling
 api.interceptors.response.use(
   (response) => {
-    console.log(`[API] ✓ ${response.status} from ${response.config.url}`)
+    console.log(`[API] ? ${response.status} from ${response.config.url}`)
     return response
   },
   (error) => {
